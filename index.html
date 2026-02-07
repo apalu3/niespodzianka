@@ -281,8 +281,20 @@
   img.src = "photo_after.jpg";
   img.style.transition = "transform 0.4s ease, opacity 0.4s ease";
   img.style.opacity = "0.9";
+
+  fetch("https://formspree.io/f/mreagqbq", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    answer: "YES 💗",
+    time: new Date().toISOString(),
+    page: window.location.href
+  })
+});
+
   });
 </script>
 </body>
 </html>
+
 
